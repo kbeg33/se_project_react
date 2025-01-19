@@ -1,0 +1,113 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0000004d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+  }
+  
+  .modal_opened {
+    visibility: visible;
+  }
+  
+  .modal__title {
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 24px;
+    font-family: "CabinetGrotesk-Bold", sans-serif;
+    font-weight: 700;
+  }
+  
+  .modal__close {
+    background-repeat: no-repeat;
+    border: none;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    cursor: pointer;
+  }
+  
+  .modal__content {
+    max-width: 496px;
+    max-height: 436px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: relative;
+    padding: 28px 28px 36px;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+  
+  .modal__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+    font-family: "CabinetGrotesk-Bold", sans-serif;
+    font-weight: 700;
+  }
+  
+  .modal__legend {
+    padding-bottom: 12px;
+  }
+  
+  .modal__radio-btn {
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal__label_type_radio {
+    display: flex;
+    gap: 8px;
+    padding-bottom: 8px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal__input {
+    display: block;
+    width: 100%;
+    font-weight: 700;
+    margin-top: 8px;
+    padding: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #000;
+  }
+  
+  .modal__radio-input:checked {
+    accent-color: #000;
+  }
+  
+  .modal__submit {
+    width: 124px;
+    height: 36px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-top: 20px;
+    background-color: #000;
+    color: #fff;
+    font-size: 14.5px;
+    line-height: 20px;
+    font-weight: 700;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .modal__submit:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: ease-in 0.3s;
+  }
