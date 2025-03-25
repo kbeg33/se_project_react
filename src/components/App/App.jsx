@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Routes, Route} from 'react-router-dom';
 
 import './App.css'
 
@@ -10,6 +11,7 @@ import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 import ItemModal from '../ItemModal/ItemModal';
+import Profile from '../Profile/Profile';
 import CurrentTemperatureUnitContext from '../../contexts/CurrentTemperatureUnit';
 import AddItemModal from '../AddItemModal/AddItemModal';
 
@@ -39,7 +41,7 @@ function App() {
   }
 
   const handleAddItemModalSubmit = ({ name, imageUrl, weather }) => {
-    setClothingItems([{ name, link: imageUrl, weather }, ...clothingItems]);
+    setClothingItems((prevItems)=>[{ name, link: imageUrl, weather }, ...prevItems]);
     closeModal();
   };
 
@@ -64,7 +66,12 @@ function App() {
     <div className='page'>
       <div className='page__content'>
         <Header handleAddClick={handleAddClick} weatherData={weatherData} closeModal={closeModal} />
-        <Main weatherData={weatherData} handleCardClick={handleCardClick} clothingItems={clothingItems} />
+        <Routes>
+          <Route path='/' element={<Main weatherData={weatherData} handleCardClick={handleCardClick} clothingItems={clothingItems} />} />
+          <Route path='/profile' element={<Profile />} />
+        </Routes>
+        
+        
         <Footer />
       </div>
       <AddItemModal 
