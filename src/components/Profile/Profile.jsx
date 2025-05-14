@@ -9,7 +9,7 @@ function Profile() {
         <SideBar />
         </section>
         <section className="profile__clothing-items">
-        {/* <ClothesSection /> */}
+        <ClothesSection />
         </section>
     </div>
     );
